@@ -1,0 +1,21 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Nested build artifacts (dentro de los paquetes)
+**/build/
+**/install/
+**/log/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Extensiones de editores
+.vscode/
+.idea/
+*.swp
+*~
+
+mavros_vicon/

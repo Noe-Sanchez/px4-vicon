@@ -33,6 +33,9 @@ endif()
 add_executable(vicon_px4_publisher_node src/vicon_px4_publisher.cpp)
 ament_target_dependencies(vicon_px4_publisher_node rclcpp std_msgs geometry_msgs visualization_msgs px4_msgs)
 
+add_executable(vicon_mavros_node src/vicon_mavros.cpp)
+ament_target_dependencies(vicon_mavros_node rclcpp std_msgs geometry_msgs visualization_msgs )
+
 #ament_python_install_package(${PROJECT_NAME})
 
 #install(PROGRAMS
@@ -42,6 +45,7 @@ ament_target_dependencies(vicon_px4_publisher_node rclcpp std_msgs geometry_msgs
 
 install(TARGETS
   vicon_px4_publisher_node
+  vicon_mavros_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
